@@ -1,0 +1,24 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "A simple and efficient To-Do List application built with **JavaScript** and **Node.js**, designed to help users manage their daily tasks.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andro-crt-prog/To-Do-List.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andro-crt-prog/To-Do-List/issues"
+  },
+  "homepage": "https://github.com/Andro-crt-prog/To-Do-List#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
