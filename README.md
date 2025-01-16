@@ -16,7 +16,7 @@ A simple and efficient To-Do List application built with **JavaScript** and **No
 ## **Tech Stack**
 - **Frontend**: HTML, CSS, JavaScript  
 - **Backend**: Node.js with Express.js  
-- **Database**: MongoDB, MySQL, or a JSON file  
+- **Database**: JSON file  
 - **Tools**: npm, Git, dotenv (for environment variables)  
 
 ---
@@ -85,7 +85,7 @@ todo-list-app/
 - **Express**: Web framework for Node.js.  
 - **Body-parser**: Middleware to parse JSON and URL-encoded requests.  
 - **dotenv**: For managing environment variables.  
-- **Database**: MongoDB, Sequelize, or any other supported database.  
+  
 
 ---
 
