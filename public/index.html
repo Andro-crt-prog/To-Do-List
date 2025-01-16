@@ -8,10 +8,25 @@
 </head>
 <body>
     <div class="container">
-        <h1>To-Do List</h1>
-        <input type="text" id="taskInput" placeholder="Add a new task..." />
-        <button id="addTaskBtn">Add Task</button>
-        <ul id="taskList"></ul>
+        <h1>Daily Priorities</h1>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        <div class="grid-container">
+            <div class="column">
+                <h2>Tasks</h2>
+                <ul id="taskList" class="taskList"></ul>
+            </div>
+            <div class="column">
+                <h2>Notes</h2>
+                <textarea id="notes" placeholder="Write your notes here..."></textarea>
+            </div>
+            <div class="column">
+                <h2>Remember & Focus</h2>
+                <textarea id="rememberFocus" placeholder="Things to remember and focus on..."></textarea>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

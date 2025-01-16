@@ -1,81 +1,148 @@
 body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+  font-family: 'Times New Roman', serif;
+  background-color: rgb(207, 228, 214);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrollbars */
+}
 
-    .container {
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 400px;
-      padding: 20px;
-    }
+.container {
+  background: #ffffff;
+  background-image: url("../media/Pic.jpg"); /* Ensure the path is correct */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Adjust width to fit the screen */
+  height: auto; /* Allow height to adjust based on content */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px; /* Optional: Add slight rounding for aesthetics */
+}
 
-    h1 {
-      text-align: center;
-      color: #333333;
-    }
+h1 {
+  text-align: center;
+  color: #333333;
+  margin: 0; /* Remove default margin */
+  padding: 10px 0; /* Add padding for spacing */
+}
 
-    #taskInput {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
+.input-container {
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+}
 
-    #addTaskBtn {
-      background-color: #007BFF;
-      color: #fff;
-      padding: 10px;
-      width: 100%;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px; /* Rounded corners on the left side */
+}
 
-    #addTaskBtn:hover {
-      background-color: #0056b3;
-    }
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 0 4px 4px 0; /* Rounded corners on the right side */
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0 0;
-    }
+button:hover {
+  background-color: #45a049;
+}
 
-    li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #f9f9f9;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      margin-bottom: 10px;
-    }
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Create 2 equal columns */
+  gap: 20px; /* Add space between columns */
+  width: 100%;
+}
 
-    .completed {
-      text-decoration: line-through;
-      color: #999;
-    }
+.column {
+  padding: 2px;
+  border-radius: 9px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    .delete-btn {
-      background-color: #e74c3c;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
+.column:nth-child(1) {
+  background: #ffc0cb; /* Pink for Tasks */
+  grid-column: 1 / 2; /* Occupy the first column */
+}
 
-    .delete-btn:hover {
-      background-color: #c0392b;
-    }
+.column:nth-child(2) {
+  background: #77b88d; /* Orange for Notes */
+  grid-column: 2 / 3; /* Occupy the second column */
+}
+
+.column:nth-child(3) {
+  background: #f5f5dc; /* Beige for Remember & Focus */
+  grid-column: 2 / 3; /* Occupy the second column */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+  overflow-y: auto; /* Add vertical scroll if needed */
+  max-height: 300px; /* Increase height to fit inside the larger container */
+}
+
+/* Hide scrollbar for WebKit browsers */
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for other browsers */
+ul {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 5px; /* Reduce padding */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 5px; /* Reduce margin */
+  font-size: 14px; /* Reduce font size */
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 6px; /* Decrease padding */
+  font-size: 12px; /* Decrease font size */
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+textarea {
+  width: 96%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none; /* Prevent resizing */
+}
