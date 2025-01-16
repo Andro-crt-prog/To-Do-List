@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete';
+        deleteButton.innerHTML = '&times;'; // Use the cross icon
         deleteButton.classList.add('delete-btn');
         deleteButton.addEventListener('click', (event) => {
             event.stopPropagation(); // Prevent the click event from toggling completion
