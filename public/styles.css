@@ -1,6 +1,10 @@
 body {
   font-family: 'Times New Roman', serif;
   background-color: rgb(207, 228, 214);
+  background-image: url("../media/Pic.jpg"); /* Ensure the path is correct */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,10 +16,6 @@ body {
 
 .container {
   background: #ffffff;
-  background-image: url("../media/Pic.jpg"); /* Ensure the path is correct */
-  background-size: cover; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 90%; /* Adjust width to fit the screen */
   height: auto; /* Allow height to adjust based on content */

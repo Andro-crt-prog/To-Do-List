@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const port = 3006;
+const port = 3007;
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
